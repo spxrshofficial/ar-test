@@ -2,6 +2,7 @@
 import React, { useRef } from "react";
 import { OrbitControls } from "@react-three/drei";
 import { Canvas, useFrame } from "@react-three/fiber";
+import '@google/model-viewer';
 
 const Box = () => {
   const boxRef = useRef();
@@ -27,26 +28,15 @@ export default function Home() {
   
   
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between bg-gray w-full h-screen">
-      <Canvas className="w-full h-full">
-        <ambientLight />
-        <pointLight position={[10, 10, 10]} />
-        <Box/>
-        <OrbitControls />
-      </Canvas> 
-      <div className="flex flex-col items-center justify-center w-full h-full bg-gray-200">
-      <model-viewer src="macbook.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="poster.webp" shadow-intensity="1" auto-rotate>
-    <div class="progress-bar hide" slot="progress-bar">
-        <div class="update-bar"></div>
-    </div>
-    <button slot="ar-button" id="ar-button">
-        View in your space
-    </button>
-    <div id="ar-prompt">
-        <img src="https://modelviewer.dev/shared-assets/icons/hand.png"/>
-    </div>
-</model-viewer>
-      </div>
+    <main className="flex min-h-screen flex-col items-center justify-between bg-white/20 w-full h-screen">
+      <model-viewer
+        src="/painting1.glb"
+        ios-src="/painting1.usdz"
+        ar
+        camera-controls
+        auto-rotate
+        style={{ width: "100%", height: "100%" }}>
+      </model-viewer>
     </main>
   );
 }
