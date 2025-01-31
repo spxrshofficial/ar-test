@@ -4,29 +4,8 @@ import { OrbitControls } from "@react-three/drei";
 import { Canvas, useFrame } from "@react-three/fiber";
 import '@google/model-viewer';
 
-const Box = () => {
-  const boxRef = useRef();
-
-  useFrame(() => {
-    boxRef.current.rotation.x += 0.1;
-    boxRef.current.rotation.y += 0.01;
-  });
-  return (
-    <>
-    <mesh ref={boxRef}>
-      <boxGeometry args={[1, 1, 1]} />
-      <meshStandardMaterial color="hotpink" />
-    </mesh>
-    </>
-  );
-};
-
 
 export default function Home() {
-
-  
-  
-  
   return (
     <main className="flex min-h-screen flex-col items-center justify-between bg-white/20 w-full h-screen">
       <model-viewer
