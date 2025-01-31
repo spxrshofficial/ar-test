@@ -1,13 +1,19 @@
 'use client';
 
-import { useEffect } from 'react';
-import '@google/model-viewer';
+import { useEffect, useState } from 'react';
 
 export default function ModelViewer() {
+  const [mounted, setMounted] = useState(false);
+
   useEffect(() => {
-    // Ensure model-viewer loads only on client
-    window.LitElementPrefix = 'production';
+    const loadModelViewer = async () => {
+      await import('@google/model-viewer');
+      setMounted(true);
+    };
+    loadModelViewer();
   }, []);
+
+  if (!mounted) return <div>Loading model viewer...</div>;
 
   return (
     <model-viewer
@@ -17,12 +23,6 @@ export default function ModelViewer() {
       camera-controls
       auto-rotate
       style={{ width: '100%', height: '100%' }}
-      loading="eager"
-      reveal="auto"
-      camera-orbit="0deg 75deg 105%"
-      exposure="0.5"
-      shadow-intensity="1"
-      disable-zoom
     />
   );
 }
