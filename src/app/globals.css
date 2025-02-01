@@ -20,12 +20,31 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-@layout {
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1rem;
-  }
+
 
   
+.Hotspot {
+  display: block;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  border: none;
+  background-color: #00000000;
+  border: 2px solid #000000;
+  box-sizing: border-box;
+  pointer-events: none;
 }
+
+
+  .HotspotAnnotation{
+    background-color: #88888888;
+    position: absolute;
+    transform: translate(10px, 10px);
+    border-radius: 10px;
+    padding: 10px;
+    font-weight: bold;
+  }
+  /* This keeps child nodes hidden while the element loads */
+  :not(:defined) > * {
+    display: none;
+  }
