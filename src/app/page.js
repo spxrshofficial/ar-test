@@ -56,7 +56,7 @@ export default function Home() {
         </div>
         <div className='sm:w-1/2 w-full sm:h-full  h-1/2 sm:pt-20 pt-2 pb-20 sm:px-2 px-20'><ModelViewer model={heroModel} /></div>
       </section>
-      <section id='usecases' className='h-screen flex sm:flex-row flex-col items-center justify-center sm:px-[5rem] px-5'>
+      <section id='usecases' className='bg-gradient-to-br from-violet-900 to-violet-300 h-screen flex sm:flex-row flex-col items-center justify-center sm:px-[5rem] px-5'>
         <div className='sm:w-1/2 w-full h-full  sm:items-center sm:px-10 px-2 justify-center flex flex-col'>
           <h1 className='text-3xl font-bold w-full sm:text-left text-left'>Add hotspots to your 3D models</h1>
           <h2 className='text-md sm:text-left w-full text-left pt-2'>
@@ -66,11 +66,11 @@ export default function Home() {
         <HotspotViewer />
         </div>
       </section>
-      <section id='usecases2' className='h-screen flex sm:flex-row flex-col items-center justify-center sm:px-[5rem] px-5'>
+      <section id='usecases2' className='bg-gradient-to-br from-green-900 to-green-300 h-screen flex sm:flex-row flex-col items-center justify-center sm:px-[5rem] px-5'>
         <div className='sm:w-1/2 w-full h-full  sm:items-center sm:px-10 px-2 justify-center flex flex-col'>
           <h1 className='text-3xl font-bold w-full sm:text-left text-left'>Add Animations to your 3D models</h1>
           <h2 className='text-md sm:text-left w-full text-left pt-2'>
-            Show prebuild animated models to demonstrate how the product works or to display the internal mechanisms</h2>
+            Show prebuilt animated models to demonstrate how the product works or to display the internal mechanisms</h2>
         </div>
         <div className='sm:w-1/2 w-full  h-full'>
         <ExplodedViewer />

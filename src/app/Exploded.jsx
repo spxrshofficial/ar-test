@@ -1,6 +1,5 @@
 "use client";
 import { useEffect, useRef, useState } from 'react';
-import ModelViewer from './ModelViewer';
 
 export default function ExplodedViewer({ }) {
     const [mounted, setMounted] = useState(false);
