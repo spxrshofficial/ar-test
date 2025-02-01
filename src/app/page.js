@@ -37,11 +37,11 @@ export default function Home() {
   const [heroModel, setHeroModel] = useState(ARModels[0]);
 
   return (
-    <main className=" min-h-screen bg-gray-900 w-full mx-auto">
+    <main className="text-white min-h-screen bg-gray-900 w-full mx-auto">
       <section id='hero' className="bg-gradient-to-br from-cyan-900 to-cyan-300  h-screen flex sm:flex-row flex-col items-center justify-center sm:px-[5rem] px-5">
         <div className='sm:w-1/2 w-full sm:h-full h-1/2  sm:items-center sm:px-10 px-2 justify-center flex flex-col'>
-          <h1 className='text-3xl font-bold w-full sm:text-left text-left'>3D object showcase in AR</h1>
-          <h2 className='text-md sm:text-left w-full text-left pt-2'>Immerse yourself in interactive 3D models using Model Viewer by Google.
+          <h1 className='text-white text-3xl font-bold w-full sm:text-left text-left'>3D object showcase in AR</h1>
+          <h2 className='text-white text-md sm:text-left w-full text-left pt-2'>Immerse yourself in interactive 3D models using Model Viewer by Google.
             Explore product visualization, architecture previews, and more—right in your browser.
             <br />
             <br />
@@ -56,7 +56,7 @@ export default function Home() {
         </div>
         <div className='sm:w-1/2 w-full sm:h-full  h-1/2 sm:pt-20 pt-2 pb-20 sm:px-2 px-20'><ModelViewer model={heroModel} /></div>
       </section>
-      <section id='usecases' className='bg-gradient-to-br from-violet-900 to-violet-300 h-screen flex sm:flex-row flex-col items-center justify-center sm:px-[5rem] px-5'>
+      <section id='usecases' className=' text-white bg-gradient-to-br from-violet-900 to-violet-300 h-screen flex sm:flex-row flex-col items-center justify-center sm:px-[5rem] px-5'>
         <div className='sm:w-1/2 w-full h-full  sm:items-center sm:px-10 px-2 justify-center flex flex-col'>
           <h1 className='text-3xl font-bold w-full sm:text-left text-left'>Add hotspots to your 3D models</h1>
           <h2 className='text-md sm:text-left w-full text-left pt-2'>
